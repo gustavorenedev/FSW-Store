@@ -30,7 +30,7 @@ const ProductImages = ({ imageURLs, name }: ProductImagesProps) => {
           }}
         />
       </button>
-      <div className="mt-8 grid grid-cols-4 gap-4">
+      <div className="px-3 mt-8 grid grid-cols-4 gap-4">
         {imageURLs.map((imageURL) => (
           <div
             key={imageURL}
