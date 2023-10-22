@@ -1,8 +1,12 @@
 "use client";
 
-import { ProductWithTotalPrice } from "@/helpers/product";
+import CartItem from "@/components/ui/cart-item";
+import {
+  ProductWithTotalPrice,
+  computeProductTotalPrice,
+} from "@/helpers/product";
 import { Product } from "@prisma/client";
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, use, useMemo, useState } from "react";
 
 export interface CartProduct extends ProductWithTotalPrice {
   quantity: number;
@@ -13,6 +17,9 @@ interface IcartContext {
   cartTotalPrice: number;
   cartBasePrice: number;
   cartTotalDiscount: number;
+  total: number;
+  subtotal: number;
+  totalDiscount: number;
   addProductToCart: (product: CartProduct) => void;
   decreaseProductQuantity: (product: CartProduct) => void;
   increaseProductQuantity: (product: CartProduct) => void;
@@ -24,6 +31,9 @@ export const CartContext = createContext<IcartContext>({
   cartTotalPrice: 0,
   cartBasePrice: 0,
   cartTotalDiscount: 0,
+  total: 0,
+  subtotal: 0,
+  totalDiscount: 0,
   addProductToCart: () => {},
   decreaseProductQuantity: () => {},
   increaseProductQuantity: () => {},
@@ -32,6 +42,21 @@ export const CartContext = createContext<IcartContext>({
 
 const CartProvider = ({ children }: { children: ReactNode }) => {
   const [products, setProducts] = useState<CartProduct[]>([]);
+
+  // useMemo só executa quando o products receber uma alteração de estado
+  const subtotal = useMemo(() => {
+    return products.reduce((acc, product) => {
+      return acc + Number(product.basePrice);
+    }, 0);
+  }, [products]);
+
+  const total = useMemo(() => {
+    return products.reduce((acc, product) => {
+      return acc + product.totalPrice;
+    }, 0);
+  }, [products]);
+
+  const totalDiscount = subtotal - total;
 
   const addProductToCart = (product: CartProduct) => {
     // se o produto já estiver no carrinho, apenas aumente sua quantidade
@@ -109,6 +134,9 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
         decreaseProductQuantity,
         increaseProductQuantity,
         removeProductFromCart,
+        total,
+        subtotal,
+        totalDiscount,
         cartTotalPrice: 0,
         cartBasePrice: 0,
         cartTotalDiscount: 0,
