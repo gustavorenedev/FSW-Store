@@ -15,6 +15,7 @@ interface IcartContext {
   cartTotalDiscount: number;
   addProductToCart: (product: CartProduct) => void;
   decreaseProductQuantity: (product: CartProduct) => void;
+  increaseProductQuantity: (product: CartProduct) => void;
 }
 
 export const CartContext = createContext<IcartContext>({
@@ -24,6 +25,7 @@ export const CartContext = createContext<IcartContext>({
   cartTotalDiscount: 0,
   addProductToCart: () => {},
   decreaseProductQuantity: () => {},
+  increaseProductQuantity: () => {},
 });
 
 const CartProvider = ({ children }: { children: ReactNode }) => {
@@ -74,12 +76,30 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
     );
   };
 
+  const increaseProductQuantity = (productId: string) => {
+    // se a quantidade for 0, remova o produto do carrinho
+
+    // se não, diminua a quantidade em 1
+    setProducts((prev) =>
+      prev.map((cartProduct) => {
+        if (cartProduct.id === productId) {
+          return {
+            ...cartProduct,
+            quantity: cartProduct.quantity + 1,
+          };
+        }
+        return cartProduct;
+      }),
+    );
+  };
+
   return (
     <CartContext.Provider
       value={{
         products,
         addProductToCart,
         decreaseProductQuantity,
+        increaseProductQuantity,
         cartTotalPrice: 0,
         cartBasePrice: 0,
         cartTotalDiscount: 0,
