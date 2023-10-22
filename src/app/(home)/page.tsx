@@ -3,7 +3,7 @@ import Categories from "./components/Categories";
 import { prismaClient } from "@/lib/prisma";
 import ProductList from "./components/Product-list";
 import SectionTitle from "./components/Section-title";
-import PromoBanner from "./components/promo-banner";
+import PromoBanner from "./components/Promo-banner";
 
 export default async function Home() {
   // buscando os produtos onde o percentual de desconto for maior que 0
