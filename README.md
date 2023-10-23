@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# FSW-Store Project 💻
 
-## Getting Started
+This is the repository where I developed an e-commerce during the Full Stack Week, an event where I could enhance my Front-end skills.
 
-First, run the development server:
+## Technologies Used 🚀
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **React**: A popular JavaScript library for building interactive user interfaces.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Next.js 13**: A React framework that offers server-side rendering (SSR), static site generation (SSG), among many other features.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next Auth**: A library for user authentication with OAuth.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Postgres**: A relational database management system.
 
-## Learn More
+- **Prisma**: An Object-Relational Mapping (ORM) for Node.js and TypeScript.
 
-To learn more about Next.js, take a look at the following resources:
+- **shadcn/ui**: A library of reusable and stylizable UI components.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Tailwind CSS**: A CSS framework that provides pre-styled utility classes.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Stripe API**: A popular payment API for secure online payments.
 
-## Deploy on Vercel
+## Features 📦
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Google Login**: We allow users to log in using their Google accounts for a simplified authentication experience.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Category Navigation**: Users can explore products by categories, making searching and shopping easier.
+
+- **Product Discounts**: Some products may have special discounts, allowing users to save on their purchases.
+
+- **Shopping Cart Management**: Users can add products to their shopping cart, remove products, and also adjust the quantity of a product in the shopping cart as needed.
+
+- **Payment with Stripe API**: We provide a secure online payment experience with Stripe API integration, including the use of webhooks to process payment-related events. Users can complete their orders with ease and security.
+
+## Figma Prototype 🎨
+
+You can view the prototype of our project on Figma. It provides a visual preview of how the user interface is designed and how different features are organized. Check out the prototype [here](https://www.figma.com/file/Y8jmabSZXXAobeUJQdI4bm/FSW-Store-%5BLive%5D?type=design&mode=design&t=JoIB87O9jkqADxpN-1).
+
+Feel free to explore and share your feedback on the project's design!
+
+### How to Access
+
+## Prerequisites
+
+Before you begin, make sure you have updated the environment variables.
+
+1. Clone this repository:
+
+   ```sh
+   git clone https://github.com/gustavorenedev/FSW-Store.git
+
+   ```
+
+2. In the terminal:
+   cd FSW-Store
+   npm install
+
+3. To Use:
+   npm run dev
+   Open your browser and visit http://localhost:3000
