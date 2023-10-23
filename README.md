@@ -1,60 +1,57 @@
-# FSW-Store Project 💻
+# Projeto FSW-Store 💻
 
-This is the repository where I developed an e-commerce during the Full Stack Week, an event where I could enhance my Front-end skills.
+Este é o em que desenvolvi um e-commerce durante a Full Stack Week, um evento no qual pude aprimorar minhas habilidades em Front-end.
 
-## Technologies Used 🚀
+## Tecnologias Utilizadas 🚀
 
-- **React**: A popular JavaScript library for building interactive user interfaces.
+- **React**: Uma biblioteca JavaScript popular para construir interfaces de usuário interativas.
 
-- **Next.js 13**: A React framework that offers server-side rendering (SSR), static site generation (SSG), among many other features.
+- **Next.js 13**: Um framework React que oferece renderização do lado do servidor (SSR), geração estática (SSG), entre muitos outros recursos.
 
-- **Next Auth**: A library for user authentication with OAuth.
+- **Next Auth**: Biblioteca para autenticação de usuários com OAuth.
 
-- **Postgres**: A relational database management system.
+- **Postgres**: Um sistema de gerenciamento de banco de dados relacional.
 
-- **Prisma**: An Object-Relational Mapping (ORM) for Node.js and TypeScript.
+- **Prisma**: Um ORM (Object-Relational Mapping) para Node.js e TypeScript.
 
-- **shadcn/ui**: A library of reusable and stylizable UI components.
+- **shadcn/ui**: Uma biblioteca de componentes de IU reutilizáveis e estilizáveis.
 
-- **Tailwind CSS**: A CSS framework that provides pre-styled utility classes.
+- **Tailwind CSS**: Um framework CSS que oferece várias classes para utilização já pré-estilizadas.
 
-- **Stripe API**: A popular payment API for secure online payments.
+- **API do Stripe**: Uma API de pagamento popular para processar pagamentos online de forma segura.
 
-## Features 📦
+## Funcionalidades 📦
 
-- **Google Login**: We allow users to log in using their Google accounts for a simplified authentication experience.
+- **Login com o Google**: Permitimos que os usuários façam login usando suas contas do Google para uma experiência de autenticação simplificada.
 
-- **Category Navigation**: Users can explore products by categories, making searching and shopping easier.
+- **Navegação por Categorias**: Os usuários podem explorar produtos por categorias, facilitando a busca e a compra.
 
-- **Product Discounts**: Some products may have special discounts, allowing users to save on their purchases.
+- **Descontos em Produtos**: Alguns produtos podem ter descontos especiais, permitindo aos usuários economizar em suas compras.
 
-- **Shopping Cart Management**: Users can add products to their shopping cart, remove products, and also adjust the quantity of a product in the shopping cart as needed.
+- **Gerenciamento do Carrinho de Compras**: Os usuários podem adicionar produtos ao seu carrinho de compras, remover produtos e também modificar a quantidade de um produto no carrinho de compras conforme necessário.
 
-- **Payment with Stripe API**: We provide a secure online payment experience with Stripe API integration, including the use of webhooks to process payment-related events. Users can complete their orders with ease and security.
+- **Pagamento do Pedido com a API do Stripe**: Oferecemos uma experiência segura de pagamento online com a integração da API do Stripe, incluindo o uso de webhooks para processar eventos relacionados ao pagamento. Os usuários podem concluir seus pedidos com facilidade e segurança.
 
-## Figma Prototype 🎨
+## Protótipo no Figma 🎨
 
-You can view the prototype of our project on Figma. It provides a visual preview of how the user interface is designed and how different features are organized. Check out the prototype [here](https://www.figma.com/file/Y8jmabSZXXAobeUJQdI4bm/FSW-Store-%5BLive%5D?type=design&mode=design&t=JoIB87O9jkqADxpN-1).
+Você pode visualizar o protótipo do nosso projeto no Figma. Ele oferece uma prévia visual de como a interface do usuário é projetada e como as diferentes funcionalidades são organizadas. Confira o protótipo [aqui](https://www.figma.com/file/Y8jmabSZXxAobeUJQdI4bm/FSW-Store-%5BLive%5D?type=design&mode=design&t=JoIB87O9jkqADxpN-1).
 
-Feel free to explore and share your feedback on the project's design!
+Fique à vontade para explorar e compartilhar suas opiniões sobre o design do projeto!
 
-### How to Access
+### Como Acessar
 
-## Prerequisites
+## Pré-requisitos
 
-Before you begin, make sure you have updated the environment variables.
+Antes de começar, certifique-se de ter mudado as variaveis do .env
 
-1. Clone this repository:
-
+1. Clone este repositório:
    ```sh
    git clone https://github.com/gustavorenedev/FSW-Store.git
 
-   ```
-
-2. In the terminal:
+2. No terminal: 
    cd FSW-Store
    npm install
 
-3. To Use:
+3. Para Utilizar:
    npm run dev
-   Open your browser and visit http://localhost:3000
+   Entre no browser http://localhost:3000
