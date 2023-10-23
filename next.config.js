@@ -6,6 +6,9 @@ const nextConfig = {
       "https://www.google.com/",
     ],
   },
+  experimental: {
+    serverActions: true,
+  },
 };
 
 module.exports = nextConfig;
